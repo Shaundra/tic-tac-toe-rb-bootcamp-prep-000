@@ -99,7 +99,7 @@ def play(board)
         puts "Congratulations #{winner(board)}!"
         break
       else
-        puts "Game ends in an draw!"
+        puts "Cat's Game!"
         break
       end
     else
