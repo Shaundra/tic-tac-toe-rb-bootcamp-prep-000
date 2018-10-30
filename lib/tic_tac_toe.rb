@@ -57,3 +57,34 @@ end
 def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
+
+def won?(board)
+  WIN_COMBINATIONS.each do |combo|
+    if (board[combo[0]].strip == board[combo[1]].strip &&
+        board[combo[0]].strip == board[combo[2]].strip &&
+        !(board[combo[0]].strip.empty?))
+      return combo
+    end
+  end
+  false
+end
+
+def full?(board)
+  board.none? { |position| position.strip.empty? }
+end
+
+def draw?(board)
+  if won?(board) || (full?(board) == false && won?(board) == false)
+    false
+  elsif won?(board) == false and full?(board)
+    true
+  end
+end
+
+def over?(board)
+  won?(board) || draw?(board) || full?(board) ? true : false
+end
+
+def winner(board)
+  won?(board) ? board[won?(board)[0]] : nil
+end
