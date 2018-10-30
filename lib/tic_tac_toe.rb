@@ -78,7 +78,7 @@ def draw?(board)
   full_state = full?(board)
   if won_state || (full_state == false && won_state == false)
     false
-  elsif won?(board) == false && full?(board)
+  elsif won_state == false && full_state
     true
   end
 end
