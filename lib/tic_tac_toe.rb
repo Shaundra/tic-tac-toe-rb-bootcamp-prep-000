@@ -96,7 +96,7 @@ def play(board)
     #turn(board)
     if over?(board)
       if won?(board)
-        puts "Congratulations, Player #{winner(board)}!"
+        puts "Congratulations #{winner(board)}!"
         break
       else
         puts "Game ends in an draw!"
