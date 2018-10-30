@@ -76,7 +76,7 @@ end
 def draw?(board)
   if won?(board) || (full?(board) == false && won?(board) == false)
     false
-  elsif won?(board) == false and full?(board)
+  elsif won?(board) == false && full?(board)
     true
   end
 end
