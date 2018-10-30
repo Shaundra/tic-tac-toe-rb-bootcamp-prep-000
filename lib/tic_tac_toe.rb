@@ -97,8 +97,10 @@ def play(board)
     if over?(board)
       if won?(board)
         puts "Congratulations, Player #{current_player(board)}!"
+        break
       else
         puts "Game ends in an draw!"
+        break
       end
     else
       turn(board)
