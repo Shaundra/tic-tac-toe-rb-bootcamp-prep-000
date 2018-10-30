@@ -37,11 +37,8 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = input_to_index(gets.strip)
 
-  puts "What's your token?"
-  token = gets.strip
-  
   if valid_move?(board, user_input)
-    move(board, user_input, token)
+    move(board, user_input, "X")
     display_board(board)
   else
     puts "Invalid move. Let's try again."
