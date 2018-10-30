@@ -93,7 +93,7 @@ end
 
 def play(board)
   loop do
-    turn(board)
+    #turn(board)
     if over?(board)
       if won?(board)
         puts "Congratulations, Player #{current_player(board)}!"
@@ -107,6 +107,7 @@ def play(board)
     end
   end
 end
+
 
 # until the game is over
 #   take turns
