@@ -45,3 +45,11 @@ def turn(board)
     turn(board)
   end
 end
+
+def turn_count(board)
+  counter = 0
+  board.each do |space|
+    space == "X" || space == "O" ? counter += 1 : false
+  end
+  counter
+end
